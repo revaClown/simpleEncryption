@@ -78,6 +78,5 @@ const runTheBeast = () => {
 };
 
 window.onload = function () {
-  // sleepFor(100);
   runTheBeast();
 };
