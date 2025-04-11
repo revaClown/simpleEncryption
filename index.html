@@ -9,13 +9,20 @@
   </head>
   <body class="container">
     <h1>Paguyuban Cucu si Eyang</h1>
-    <button onclick="hello()">Click me</button>
-    <div>
+    <!-- <button onclick="hello()">Click me</button> -->
+
+    <div class="divider">
+      <p>Proses</p>
+      <p id="placeholder1"></p>
+      <p id="placeholder2"></p>
+    </div>
+
+    <div class="hide">
       <label for="phnumber">Phone number:</label>
       <input type="text" id="phnumber" name="phnumber" oninput="inputProcessor()" /><br /><br />
     </div>
 
-    <div>
+    <div class="hide">
       <p>Hasil enkripsi: <span id="encrypted"></span></p>
       <p>Hasil dekripsi: <span id="decrypted"></span></p>
     </div>
