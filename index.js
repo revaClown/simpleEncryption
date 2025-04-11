@@ -2,8 +2,6 @@ const hello = () => {
   // console.log("hello world!");
 };
 
-//
-
 function sleepFor(sleepDuration) {
   var now = new Date().getTime();
   while (new Date().getTime() < now + sleepDuration) {
