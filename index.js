@@ -1,6 +1,15 @@
 const hello = () => {
-  console.log("hello world!");
+  // console.log("hello world!");
 };
+
+//
+
+function sleepFor(sleepDuration) {
+  var now = new Date().getTime();
+  while (new Date().getTime() < now + sleepDuration) {
+    /* Do nothing */
+  }
+}
 
 // Using ChatGPT suggestion
 const BASE62 = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
@@ -46,11 +55,29 @@ const inputProcessor = () => {
   dec.innerHTML = decr;
 };
 
-const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
-
 // https://example.com/path/to/page?color=purple&size=M&size=L
 
 // urlParams.get('color')     // purple
-// urlParams.getAll('size')   // ['M', 'L']
-console.log(urlParams.get("c"));
+// urlParams.getAll('size')   //
+//  ['M', 'L']
+// console.log(urlParams.get("c"));
+
+const runTheBeast = () => {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const param = urlParams.get("c");
+  const phone = decryptPhone(param, 24);
+  console.log(phone);
+
+  const redirectionTarget = "https://wa.me/";
+
+  const target = redirectionTarget.concat(phone);
+  const warning = "Redirecting you to " + target;
+  alert(warning);
+  window.location.replace(target);
+};
+
+window.onload = function () {
+  // sleepFor(100);
+  runTheBeast();
+};
