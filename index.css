@@ -1403,5 +1403,13 @@ details > * + * {
   }
 }
 
+.divider {
+  padding: 1em;
+}
+
+.hide {
+  display: none;
+}
+
 /* !SECTION Page Layout */
 /* !SECTION Layout */
